@@ -12,10 +12,10 @@ import VisualStudio from '../assets/vstudio.png'
 
 const Skills = () => {
 	return (
-		<div name='skills' className='bg-[#003333] text-gray-300'>
+		<div name='skills' className='w-full h-screen bg-[#003333] text-gray-300'>
 			<div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
 				<div>
-					<p className='text-4xl font-bold inline border-b-4 border-[#007777]'>Experience</p>
+					<p className='text-4xl font-bold inline border-b-4 border-[#007777]'>Skills</p>
 					<p className='py-4'>These are the tech stacks that I have used. </p>
 				</div>
 				<div className='w-full grid grid-cols-2 sm:grid-cols-6 gap-4 text-center py-4'>
