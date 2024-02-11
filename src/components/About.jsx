@@ -1,10 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import GradPic from '../assets/grad-group.jpg'
+import MyPic from '../assets/my-pic1.jpg'
+import ThesisPic from '../assets/thesis-group.jpg'
 
 const About = () => {
 	const [expanded, setExpanded] = useState(false);
+	const [currentImageIndex, setCurrentImageIndex] = useState(0);
+	const [isImageLoaded, setIsImageLoaded] = useState(false);
+	const images = [GradPic, MyPic, ThesisPic];
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+			setIsImageLoaded(false);
+		}, 3000);
+	
+		return () => clearInterval(interval);
+	}, [images.length]);
 
 	const toggleExpanded = () => {
 		setExpanded(!expanded);
+	};
+
+	const handleImageLoad = () => {
+		setIsImageLoaded(true);
 	};
 
 	return (
@@ -16,9 +35,25 @@ const About = () => {
 					</div>
 					<div></div>
 				</div>
-				<div className='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4'>
+				<div className='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4 '>
 					<div className='sm:text-right text-4xl font-bold'>
 						<p>Hi, I'm Kemuel Kyle Paez, Nice to meet you!</p>
+						{expanded ? (
+							<div className='mt-10 hidden sm:block'>
+								<div
+									className={`w-full h-[280px] rounded ${
+										isImageLoaded ? 'opacity-100' : 'opacity-0'
+									} transition-opacity duration-300`}
+								>
+									<img
+										src={images[currentImageIndex]}
+										alt='Profile Img'
+										className='w-full h-[280px] rounded'
+										onLoad={handleImageLoad}
+									/>
+								</div>
+							</div>
+						) : null}
 					</div>
 					<div>
 						<p>
