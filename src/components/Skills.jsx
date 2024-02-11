@@ -12,7 +12,7 @@ import VisualStudio from '../assets/vstudio.png'
 
 const Skills = () => {
 	return (
-		<div name='skills' className='w-full h-screen bg-[#003333] text-gray-300'>
+		<div name='skills' className='w-full h-screen content-bg text-gray-300'>
 			<div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
 				<div>
 					<p className='text-4xl font-bold inline border-b-4 border-[#007777]'>Skills</p>
@@ -56,6 +56,14 @@ const Skills = () => {
 						<img src={Unity} alt="Unity icon" className='w-20 mx-auto'/>
 					</div>
 				</div>
+				<p>learn more on my 
+					<a 
+						href="https://drive.google.com/file/d/1A2Mnqq26UdvH37j04l6QM_Xms7xaMWQB/view?usp=sharing" 
+						target="_blank" rel="noopener noreferrer"
+						className=' text-[#4c9f9f] underline'
+					>
+					Resume
+					</a></p>
 			</div>
 		</div>
 	)

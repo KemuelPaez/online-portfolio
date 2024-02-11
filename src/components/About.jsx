@@ -27,7 +27,7 @@ const About = () => {
 	};
 
 	return (
-		<div name='about' className='w-full h-screen bg-[#003333] text-gray-300'>
+		<div name='about' className='w-full h-screen content-bg text-gray-300'>
 			<div className='flex flex-col justify-center items-center w-full h-full'>
 				<div className='max-w-[1000px] w-full grid grid-cols-2 gap-8'>
 					<div className='sm:text-right pb-8 pl-4'>
@@ -48,7 +48,7 @@ const About = () => {
 									<img
 										src={images[currentImageIndex]}
 										alt='Profile Img'
-										className='w-full h-[280px] rounded'
+										className='w-full h-[280px] rounded hover:scale-150 hover:ml-[100px] duration-300'
 										onLoad={handleImageLoad}
 									/>
 								</div>
@@ -72,12 +72,12 @@ const About = () => {
 						) : null}
 						</p>
 						{!expanded && (
-							<button className='text-[#007777] underline mt-2 font-extralight hover:text-[#ffff] hover:duration-300' onClick={toggleExpanded}>
+							<button className='text-[#4c9f9f] underline mt-2 font-extralight hover:text-[#ffff] hover:duration-300' onClick={toggleExpanded}>
 								Read More
 							</button>
 						)}
 						{expanded && (
-							<button className='text-[#007777] underline mt-2 font-extralight hover:text-[#ffff] hover:duration-300' onClick={toggleExpanded}>
+							<button className='text-[#4c9f9f] underline mt-2 font-extralight hover:text-[#ffff] hover:duration-300' onClick={toggleExpanded}>
 								See Less
 							</button>
 						)}

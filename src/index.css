@@ -28,3 +28,11 @@
         hsla(242, 74%, 61%, 0.8)
     )!important;
 }
+
+.content-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background: rgb(0,51,51);
+    background: linear-gradient(90deg, rgba(0,51,51,1) 0%, rgba(0,66,66,1) 43%, rgba(0,105,105,1) 100%);
+}

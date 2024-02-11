@@ -1,13 +1,14 @@
 import React from 'react'
 import {HiArrowNarrowRight} from 'react-icons/hi'
+import {Link} from 'react-scroll'
 import ProfileImage from '../assets/gradpic.jpeg'
 
 const Home = () => {
 	return (
-		<div name='home' className='w-full h-screen bg-[#003333]'>
+		<div name='home' className='w-full h-screen content-bg'>
 			<div className='max-w-[1080px] mx-auto px-8 flex flex-col justify-center h-full'>
 				<div className='flex flex-col sm:flex-row'>
-					<div className='sm:w-1/8 p-4 border-2 rounded border-[#003333] hover:border-[#007777] duration-500'>
+					<div className='sm:w-1/8 p-4'>
 						<p className='text-[#e84d5f] text-1xl'>Hi, my name is</p>
 						<h1 className='text-4xl sm:text-6xl font-bold text-[#f2f0ec]'>
 							Kemuel Kyle Paez
@@ -24,7 +25,13 @@ const Home = () => {
 						</p>
 					<div>
 						<button className='text-white group border-2 px-6 py-3 my-2 flex items-center rounded hover:bg-[#007777] hover:border-[#007777]'>
-							Learn More
+							<Link 
+								to="about" 
+								smooth={true} 
+								duration={500} 
+							>
+								About Me
+							</Link>
 							<span className='group-hover:rotate-90 duration-300'>
 								<HiArrowNarrowRight className='ml-3' />
 							</span>

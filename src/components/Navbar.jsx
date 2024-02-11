@@ -24,13 +24,13 @@ const Navbar = () => {
 	};
 
 	return (
-		<div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#003333] text-gray-300'>
+		<div className='fixed w-full h-[80px] flex justify-between items-center px-4 content-bg text-gray-300'>
 			<div>
 				<img src={Logo} alt='Logo' style={{width: '50px'}} />
 			</div>
 			{/* menu list */}
 			<ul className='hidden md:flex cursor-pointer'>
-				<li>
+				<li className='hover:scale-110 duration-100'>
 					<Link 
 						to="home" 
 						smooth={true} 
@@ -39,7 +39,7 @@ const Navbar = () => {
 						Home
 					</Link>
 				</li>
-				<li>
+				<li className='hover:scale-110 duration-100'>
 					<Link 
 						to="about" 
 						smooth={true} 
@@ -48,7 +48,7 @@ const Navbar = () => {
 						About
 					</Link>
 				</li>
-				<li>
+				<li className='hover:scale-110 duration-100'>
 					<Link 
 						to="skills" 
 						smooth={true} 
@@ -57,7 +57,7 @@ const Navbar = () => {
 						Skills
 					</Link>
 				</li>
-				<li>
+				<li className='hover:scale-110 duration-100'>
 					<Link 
 						to="demo" 
 						smooth={true} 
@@ -66,7 +66,7 @@ const Navbar = () => {
 						Demos
 					</Link>
 				</li>
-				<li>
+				<li className='hover:scale-110 duration-100'>
 					<Link 
 						to="contact" 
 						smooth={true} 

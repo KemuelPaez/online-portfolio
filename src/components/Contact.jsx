@@ -14,13 +14,13 @@ const Contact = () => {
 	};
 
 	return (
-		<div name='contact' className='w-full h-screen bg-[#003333] text-gray-300'>
+		<div name='contact' className='w-full h-screen content-bg text-gray-300'>
 			<div className='max-w-[1000px] mx-auto flex flex-col justify-center items-center w-full h-full'>
 				<form method='POST' action="https://getform.io/f/e4112371-a20b-42e2-b3e4-9349e3954441" className='flex flex-col max-w-[600px] w-full'>
 					<div className='pb-8'>
 						<p className='text-4xl font-bold inline border-b-4 border-[#007777]'>Contact</p>
 						<p className='py-4'>Send me an email anytime!</p>
-						<p className={`underline cursor-pointer ${emailCopied ? 'text-[#FFFFFF]' : ''}`} onClick={handleCopyEmail}>
+						<p className={`underline cursor-pointer text-[#4c9f9f] ${emailCopied ? 'text-[#4c9f9f]' : ''}`} onClick={handleCopyEmail}>
 							{emailCopied ? 'Email copied!' : 'kemkylepaez@gmail.com'}
 						</p>
 					</div>
