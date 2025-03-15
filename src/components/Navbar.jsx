@@ -26,7 +26,19 @@ const Navbar = () => {
 	return (
 		<div className='fixed w-full h-[80px] flex justify-between items-center px-4 content-bg text-gray-300'>
 			<div>
-				<img src={Logo} alt='Logo' style={{width: '50px'}} />
+				<Link 
+					to="home" 
+					smooth={true} 
+					duration={500} 
+					className="cursor-pointer"
+				>
+					<img
+						src={Logo}
+						alt="Logo"
+						className="w-12 cursor-pointer transition-transform duration-300 hover:scale-110 focus:scale-110"
+						to="home"
+					/>
+				</Link>
 			</div>
 			{/* menu list */}
 			<ul className='hidden md:flex cursor-pointer'>
